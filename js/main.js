@@ -350,7 +350,7 @@ function drawCircuitBackground() {
         const dy = n.y - o.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < maxDist) {
-          ctx.strokeStyle = `rgba(165, 110, 255, ${0.16 * (1 - dist / maxDist)})`;
+          ctx.strokeStyle = `rgba(105, 41, 196, ${0.18 * (1 - dist / maxDist)})`;
           ctx.lineWidth = window.devicePixelRatio;
           ctx.beginPath();
           ctx.moveTo(n.x, n.y);
@@ -361,7 +361,7 @@ function drawCircuitBackground() {
     }
 
     for (const n of nodes) {
-      ctx.fillStyle = "rgba(51, 177, 255, 0.55)";
+      ctx.fillStyle = "rgba(15, 98, 254, 0.6)";
       ctx.beginPath();
       ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
       ctx.fill();
