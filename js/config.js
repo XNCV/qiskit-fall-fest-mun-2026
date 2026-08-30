@@ -25,8 +25,10 @@ const SITE_CONFIG = {
   venueAddress: "Memorial University of Newfoundland, St. John's, NL, Canada",
 
   // Google Maps embed src — swap the query in the URL for your exact venue.
+  // Pinned to MUN's main campus coordinates with a zoom level (z) that keeps
+  // the whole campus centered in frame — swap the query/coords for your exact venue.
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Memorial+University+of+Newfoundland&output=embed",
+    "https://www.google.com/maps?q=47.5773,-52.7314&z=16&output=embed",
 
   // ---- Contact & social (replace placeholders before publishing) -----
   contactEmail: "qiskit.fallfest.mun@example.com",
