@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupBackToTop();
   setupYear();
   drawCircuitBackground();
+  setupCarousel();
 });
 
 /* ---------------------------------------------------------------- */
@@ -227,6 +228,81 @@ function setupBackToTop() {
 function setupYear() {
   const el = document.querySelector("[data-cfg='year']");
   if (el) el.textContent = new Date().getFullYear();
+}
+
+/* ---------------------------------------------------------------- */
+/* Photo carousel — autoplays every 5s, or navigate manually         */
+/* ---------------------------------------------------------------- */
+function setupCarousel() {
+  const carousel = document.querySelector(".carousel");
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+  const dotsWrap = carousel.querySelector(".carousel-dots");
+  const prevBtn = carousel.querySelector(".carousel-btn.prev");
+  const nextBtn = carousel.querySelector(".carousel-btn.next");
+  if (!slides.length || !dotsWrap) return;
+
+  const AUTOPLAY_MS = 5000;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let index = Math.max(0, slides.findIndex((s) => s.classList.contains("active")));
+  let timer = null;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "carousel-dot";
+    dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+    dot.addEventListener("click", () => {
+      goTo(i);
+      restart();
+    });
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function render() {
+    slides.forEach((s, i) => s.classList.toggle("active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+  function goTo(i) {
+    index = (i + slides.length) % slides.length;
+    render();
+  }
+  function next() {
+    goTo(index + 1);
+  }
+  function prev() {
+    goTo(index - 1);
+  }
+
+  function start() {
+    if (reduceMotion || slides.length < 2) return;
+    stop();
+    timer = setInterval(next, AUTOPLAY_MS);
+  }
+  function stop() {
+    if (timer) clearInterval(timer);
+    timer = null;
+  }
+  function restart() {
+    stop();
+    start();
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", () => { next(); restart(); });
+  if (prevBtn) prevBtn.addEventListener("click", () => { prev(); restart(); });
+
+  // Pause on hover/focus so manual browsing isn't interrupted
+  carousel.addEventListener("mouseenter", stop);
+  carousel.addEventListener("mouseleave", start);
+  carousel.addEventListener("focusin", stop);
+  carousel.addEventListener("focusout", start);
+
+  render();
+  start();
 }
 
 /* ---------------------------------------------------------------- */

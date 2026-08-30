@@ -14,12 +14,7 @@
   <header class="site-header">
     <div class="container nav-inner">
       <a href="#top" class="brand">
-        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="4" fill="#33B1FF"/>
-          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#A56EFF" stroke-width="2"/>
-          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#33B1FF" stroke-width="2" transform="rotate(60 24 24)"/>
-          <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#08BDBA" stroke-width="2" transform="rotate(120 24 24)"/>
-        </svg>
+        <img class="brand-mark" src="Figures/Fall%20Fest%20Sticker%20Small.png" alt="Qiskit Fall Fest 2026 official event logo" />
         <span class="brand-text">
           Qiskit Fall Fest
           <small data-cfg="orgShort">MUN</small>
@@ -43,12 +38,36 @@
         <a href="#" class="btn btn-primary btn-small" data-register-btn>
           <span class="btn-label">Register Now</span>
         </a>
+        <img class="mun-logo" src="Figures/MUN_Logo.jpg" alt="Memorial University of Newfoundland logo" />
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
       </div>
     </div>
   </header>
 
   <main id="top">
+
+    <!-- ================= PHOTO CAROUSEL ================= -->
+    <section class="carousel" aria-label="Event photo gallery">
+      <div class="carousel-track-wrap">
+        <div class="carousel-slide active">
+          <img src="Figures/Photos/CSF-building.jpg" alt="Core Science Facility at Memorial University of Newfoundland" />
+          <div class="carousel-caption">Core Science Facility — MUN</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="Figures/Photos/Engineering-building.jpg" alt="Engineering building at Memorial University of Newfoundland" />
+          <div class="carousel-caption">Engineering Building — MUN</div>
+        </div>
+
+        <button class="carousel-btn prev" aria-label="Previous slide" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn next" aria-label="Next slide" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+
+        <div class="carousel-dots" role="tablist" aria-label="Slide navigation"></div>
+      </div>
+    </section>
 
     <!-- ================= HERO ================= -->
     <section class="hero">
@@ -384,12 +403,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#top" class="brand">
-            <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="4" fill="#33B1FF"/>
-              <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#A56EFF" stroke-width="2"/>
-              <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#33B1FF" stroke-width="2" transform="rotate(60 24 24)"/>
-              <ellipse cx="24" cy="24" rx="20" ry="8" stroke="#08BDBA" stroke-width="2" transform="rotate(120 24 24)"/>
-            </svg>
+            <img class="brand-mark" src="Figures/Fall%20Fest%20Sticker%20Small.png" alt="Qiskit Fall Fest 2026 official event logo" />
             <span class="brand-text">Qiskit Fall Fest <small data-cfg="orgShort">MUN</small></span>
           </a>
           <p>An independent, student-organized event held under the global Qiskit Fall Fest program, hosted at Memorial University of Newfoundland.</p>
