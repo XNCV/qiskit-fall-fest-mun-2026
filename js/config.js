@@ -19,7 +19,7 @@ const SITE_CONFIG = {
   registrationUrl: "",
 
   // ---- Date & Location (edit freely — plain text, shown as typed) ----
-  dateText: "Date: To Be Announced",
+  dateText: "November 6–8, 2026",
   timeText: "",
   venueName: "Venue: To Be Announced",
   venueAddress: "Memorial University of Newfoundland, St. John's, NL, Canada",
@@ -28,7 +28,7 @@ const SITE_CONFIG = {
   // Centered on Memorial University's official address, at a moderate zoom
   // so the surrounding area is still visible — raise/lower z to zoom in/out.
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Memorial+University,+St.+John%27s,+NL+A1C+5S7,+Canada&z=14&output=embed",
+    "https://www.google.com/maps?q=47.5741117,-52.7352094&z=15&output=embed",
 
   // ---- Contact & social (replace placeholders before publishing) -----
   contactEmail: "qiskit.fallfest.mun@example.com",
@@ -46,28 +46,24 @@ const SITE_CONFIG = {
   // ---- FAQ -------------------------------------------------------------
   faq: [
     {
-      q: "Who can attend Qiskit Fall Fest MUN?",
-      a: "All MUN students, staff, and community members curious about quantum computing are welcome — no prior experience with quantum or programming is required. Some sessions will have beginner and advanced tracks."
-    },
-    {
-      q: "Is there a cost to attend?",
-      a: "Details on pricing (free or paid) will be shared on the registration page once it opens. Historically, Qiskit Fall Fest events are free for students."
-    },
-    {
-      q: "Do I need to bring my own laptop?",
-      a: "Yes — please bring a laptop capable of running Python and Jupyter notebooks, or a Google/IBM account to use cloud-based tools. Setup instructions will be emailed to registered participants."
-    },
-    {
-      q: "Will this be in person, virtual, or hybrid?",
-      a: "Format details (in-person at MUN, virtual, or hybrid) will be posted here as soon as they're confirmed."
-    },
-    {
       q: "What is Qiskit Fall Fest?",
       a: "Qiskit Fall Fest is a global program supported by IBM Quantum where university chapters around the world host independent, student-organized quantum computing events each fall."
     },
     {
-      q: "How can my organization sponsor this event?",
-      a: "We'd love to have you! Reach out via the contact email below and our team will share our sponsorship package."
-    }
+      q: "Who can attend Qiskit Fall Fest MUN?",
+      a: "All MUN students, staff, and community members curious about quantum computing are welcome. No prior experience with quantum programming is required. Some sessions will have beginner and advanced tracks."
+    },
+    {
+      q: "Is there a cost to attend?",
+      a: "No, the event is free to attend."
+    },
+    {
+      q: "Do I need to bring my own laptop?",
+      a: "Yes for students who want to join the Hackathon. Please bring a laptop capable of running Python and Jupyter notebooks. Setup instruction will be provided in the workshops."
+    },
+    {
+      q: "Will this be in person, virtual, or hybrid?",
+      a: "Attendees should be in-person at MUN. Speakers can join online."
+    },
   ]
 };
