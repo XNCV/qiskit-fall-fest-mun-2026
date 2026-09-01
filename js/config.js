@@ -31,17 +31,15 @@ const SITE_CONFIG = {
     "https://www.google.com/maps?q=47.5741117,-52.7352094&z=15&output=embed",
 
   // ---- Contact & social (replace placeholders before publishing) -----
-  contactEmail: "qiskit.fallfest.mun@example.com",
+  contactEmail: "cwelhengodag@mun.ca",
   social: {
-    instagram: "",
     linkedin: "",
-    discord: "",
-    twitter: "",
+    discord: "https://discord.gg/f92cFUj5MV",
     github: ""
   },
 
   // Official global Qiskit Fall Fest program page
-  qiskitFallFestGlobalUrl: "https://www.ibm.com/quantum/blog/fall-fest-2024",
+  qiskitFallFestGlobalUrl: "https://www.ibm.com/quantum/blog/qiskit-fall-fest-2026",
 
   // ---- FAQ -------------------------------------------------------------
   faq: [
