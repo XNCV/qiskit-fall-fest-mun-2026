@@ -156,7 +156,9 @@ function setupRegisterButtons() {
       btn.removeAttribute("href");
       btn.classList.add("is-disabled");
       btn.setAttribute("aria-disabled", "true");
-      btn.querySelector(".btn-label").textContent = "Registration Opening Soon";
+      btn.querySelector(".btn-label").textContent = btn.closest("header")
+        ? "Registration opens on Oct 1st"
+        : "Registration opens on Thursday, October 1st";
       btn.addEventListener("click", (e) => e.preventDefault());
     }
   });
