@@ -85,6 +85,10 @@
           <a href="#" class="btn btn-primary" data-register-btn>
             <span class="btn-label">Register Now</span>
           </a>
+          <a href="#" class="btn btn-discord" data-social="discord" target="_blank" rel="noopener noreferrer" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"/><circle cx="9" cy="12" r="1.2"/><circle cx="15" cy="12" r="1.2"/></svg>
+            Join Discord
+          </a>
           <a href="#about" class="btn btn-secondary">Learn More</a>
         </div>
         <div class="hero-meta">
@@ -94,7 +98,7 @@
           </div>
           <div>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-            <span data-cfg="venueName">Venue: To Be Announced</span>
+            <span data-cfg="venueName">Venue: EN4002 - Boardroom</span>
           </div>
           <div>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -224,22 +228,21 @@
                   <tr><th scope="col">Time</th><th scope="col">Activity</th><th scope="col">Content</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>09:00–09:30</td><td>Open Registration (&amp; Coffee + Breakfast)</td><td></td></tr>
+                  <tr><td>09:00–09:30</td><td>Open Registration</td><td></td></tr>
                   <tr><td>09:30–09:45</td><td>Welcome &amp; Introduction</td><td>Event goals, schedule, prizes</td></tr>
-                  <tr><td>09:45–10:05</td><td>Speaker 1</td><td></td></tr>
-                  <tr><td>10:05–10:25</td><td>Speaker 2</td><td></td></tr>
-                  <tr><td>10:25–10:45</td><td>Speaker 3</td><td></td></tr>
+                  <tr><td>09:45–10:05</td><td>Speaker 1 &mdash; Trung Q. Duong</td><td></td></tr>
+                  <tr><td>10:05–10:25</td><td>Speaker 2 &mdash; To be announced</td><td></td></tr>
+                  <tr><td>10:25–10:45</td><td>Speaker 3 &mdash; James LeBlanc</td><td></td></tr>
                   <tr><td>10:45–11:00</td><td>Coffee Break &amp; Networking</td><td></td></tr>
-                  <tr><td>11:00–11:20</td><td>Speaker 4</td><td></td></tr>
-                  <tr><td>11:20–11:40</td><td>Speaker 5</td><td></td></tr>
+                  <tr><td>11:00–11:20</td><td>Speaker 4 &mdash; Matthieu Fortin-Deschênes</td><td></td></tr>
+                  <tr><td>11:20–11:40</td><td>Speaker 5 &mdash; Mohammad Kashfi</td><td></td></tr>
                   <tr><td>11:40–12:00</td><td>Challenge Introduction</td><td>Explain problem, requirements, submission format, and judging criteria</td></tr>
                   <tr><td>12:00–13:30</td><td>Lunch, Networking, Kahoot Game, Team Formation &amp; Initial Mentoring</td><td></td></tr>
                   <tr><td>13:30–14:00</td><td>Workshop 1</td><td></td></tr>
-                  <tr><td>14:00–14:30</td><td>Workshop 2</td><td></td></tr>
-                  <tr><td>14:30–15:00</td><td>Workshop 3</td><td></td></tr>
+                  <tr><td>14:00–15:00</td><td>Speaker 6 &mdash; Joshua Skanes-Norman (IBM)</td><td>Quantum and Qiskit 101 Seminar</td></tr>
                   <tr><td>15:00–15:15</td><td>Coffee Break &amp; Networking</td><td></td></tr>
-                  <tr><td>15:15–15:45</td><td>Workshop 4</td><td></td></tr>
-                  <tr><td>15:45–16:15</td><td>Workshop 5</td><td></td></tr>
+                  <tr><td>15:15–15:45</td><td>Workshop 2</td><td></td></tr>
+                  <tr><td>15:45–16:15</td><td>Workshop 3</td><td></td></tr>
                   <tr><td>16:15–17:00</td><td>Mentoring Session &amp; Final Team Formation</td><td></td></tr>
                 </tbody>
               </table>
@@ -337,31 +340,58 @@
       <div class="container">
         <div class="section-header" data-reveal>
           <h2>Speakers</h2>
-          <p>Our speaker lineup is being finalized — check back soon for updates.</p>
+          <p>Meet the researchers and practitioners joining us for Qiskit Fall Fest.</p>
         </div>
 
-        <div class="people-grid">
-          <div class="people-card" data-reveal>
-            <div class="avatar">?</div>
-            <h4>To Be Announced</h4>
-            <span>Speaker</span>
-          </div>
-          <div class="people-card" data-reveal>
-            <div class="avatar">?</div>
-            <h4>To Be Announced</h4>
-            <span>Speaker</span>
-          </div>
-          <div class="people-card" data-reveal>
-            <div class="avatar">?</div>
-            <h4>To Be Announced</h4>
-            <span>Mentor</span>
-          </div>
-          <div class="people-card" data-reveal>
-            <div class="avatar">?</div>
-            <h4>To Be Announced</h4>
-            <span>Mentor</span>
-          </div>
+        <div class="speaker-list">
+          <article class="speaker-card" data-reveal>
+            <img class="speaker-photo" src="Figures/Speakers/1%20-%20Trung-Q.-Duong.jpg" alt="Trung Q. Duong" width="713" height="637" loading="lazy" />
+            <div class="speaker-details">
+              <h3>Speaker 1 &mdash; Trung Q. Duong</h3>
+              <p class="speaker-affiliation">Canada Excellence Research Chair &amp; Full Professor<br />Memorial University of Newfoundland</p>
+              <p class="speaker-bio">Trung Q. Duong is a Canada Excellence Research Chair and a Fellow of IEEE, IET and the Canadian Academy of Engineering. His honours include the UK government's Newton Prize and Royal Academy of Engineering research awards. He serves as Editor-in-Chief of IEEE Communications Surveys &amp; Tutorials and as an IEEE Communications Society Distinguished Lecturer.</p>
+            </div>
+          </article>
+          <article class="speaker-card speaker-card--pending" data-reveal>
+            <div class="speaker-details">
+              <h3>Speaker 2 &mdash; To be announced</h3>
+              <p class="speaker-bio">Speaker details will be announced soon.</p>
+            </div>
+          </article>
+          <article class="speaker-card" data-reveal>
+            <img class="speaker-photo" src="Figures/Speakers/3%20-%20JamesLeBlanc.jpg" alt="James LeBlanc" width="1197" height="1672" loading="lazy" />
+            <div class="speaker-details">
+              <h3>Speaker 3 &mdash; James LeBlanc</h3>
+              <p class="speaker-affiliation">Associate Professor, Department of Physics and Physical Oceanography<br />Memorial University of Newfoundland</p>
+              <p class="speaker-bio">James LeBlanc is a computational condensed matter physicist who earned his PhD at the University of Guelph, followed by postdoctoral research at the Max Planck Institute for the Physics of Complex Systems and the University of Michigan. He is also a co-founder of Compute Everything Technologies Ltd., a Newfoundland-based startup.</p>
+            </div>
+          </article>
+          <article class="speaker-card" data-reveal>
+            <img class="speaker-photo" src="Figures/Speakers/4%20-%20Matthieu.jfif" alt="Matthieu Fortin-Deschênes" width="800" height="800" loading="lazy" />
+            <div class="speaker-details">
+              <h3>Speaker 4 &mdash; Matthieu Fortin-Deschênes</h3>
+              <p class="speaker-affiliation">Researcher, Quantum Materials<br />PINQ&sup2;</p>
+              <p class="speaker-bio">Matthieu Fortin-Deschênes develops advanced materials modelling tools using quantum and hybrid computing at PINQ&sup2;. His doctoral research at Polytechnique Montréal and postdoctoral work at Yale University explored atomic-level engineering of advanced materials, combining experimental techniques and simulations to study their properties and potential for emerging technologies.</p>
+            </div>
+          </article>
+          <article class="speaker-card" data-reveal>
+            <img class="speaker-photo" src="Figures/Speakers/5%20-%20Mohammad.jfif" alt="Mohammad Kashfi" width="800" height="800" loading="lazy" />
+            <div class="speaker-details">
+              <h3>Speaker 5 &mdash; Mohammad Kashfi</h3>
+              <p class="speaker-affiliation">Quantum Software Developer<br />PINQ&sup2;</p>
+              <p class="speaker-bio">Mohammad Kashfi works at the intersection of quantum algorithms and discrete optimization, developing practical quantum approaches to real-world optimization problems. His experience spans quantum finance, quantum machine learning and hybrid quantum-classical computing.</p>
+            </div>
+          </article>
+          <article class="speaker-card" data-reveal>
+            <img class="speaker-photo" src="Figures/Speakers/qiskit101%20-%20Joshua.jfif" alt="Joshua Skanes-Norman" width="486" height="486" loading="lazy" />
+            <div class="speaker-details">
+              <h3>Speaker 6 &mdash; Joshua Skanes-Norman</h3>
+              <p class="speaker-affiliation">Quantum Software Engineer<br />IBM</p>
+              <p class="speaker-bio">Joshua Skanes-Norman is a Quantum Software Engineer at IBM. He will present the Quantum and Qiskit 101 Seminar on Friday, November 6, from 2–3 PM.</p>
+            </div>
+          </article>
         </div>
+
       </div>
     </section>
 
@@ -370,11 +400,29 @@
       <div class="container">
         <div class="section-header" data-reveal>
           <h2>Sponsors</h2>
-             <div class="sponsor-row">
-              <div class="sponsor-slot">Logo 1</div>
-              <div class="sponsor-slot">Logo 2</div>
-              <div class="sponsor-slot">Logo 3</div>
+        </div>
+        <div class="sponsor-row">
+          <article class="sponsor-card" data-reveal>
+            <div class="sponsor-logo">
+              <img src="Figures/Sponsors/CAIR.PNG" alt="CAIR logo" width="342" height="132" loading="lazy" />
             </div>
+            <h3>Centre for Analytics, Informatics and Research (CAIR)</h3>
+            <p>CAIR empowers Memorial researchers with high-performance computing, secure data storage and expert support for data-intensive research.</p>
+          </article>
+          <article class="sponsor-card" data-reveal>
+            <div class="sponsor-logo">
+              <img src="Figures/Sponsors/QC3.png" alt="QC3 logo" width="1280" height="641" loading="lazy" />
+            </div>
+            <h3>Quantum Communications and Computing Center (QC3)</h3>
+            <p>QC3 brings together academic and industry expertise to advance quantum communications and computing through collaborative research, innovation and skills training.</p>
+          </article>
+          <article class="sponsor-card" data-reveal>
+            <div class="sponsor-logo">
+              <img src="Figures/Sponsors/PINQ2.png" alt="PINQ2 logo" width="894" height="497" loading="lazy" />
+            </div>
+            <h3>PINQ&sup2;</h3>
+            <p>PINQ&sup2; helps Canadian businesses, researchers and startups adopt advanced computing to drive innovation, commercialization and economic value.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -402,7 +450,8 @@
 
         <div class="location-grid">
           <div class="location-info" data-reveal>
-            <h3 data-cfg="venueName">Venue: To Be Announced</h3>
+            <h3 data-cfg="venueName">Venue: EN4002 - Boardroom</h3>
+            <h3><span class="venue-indent" aria-hidden="true">Venue:&nbsp;</span>EN4000 - Coffee, snack and lunch</h3>
             <p data-cfg="venueAddress">Memorial University of Newfoundland, St. John's, NL, Canada</p>
             <div class="location-facts">
               <div>
@@ -436,13 +485,16 @@
       </div>
     </section>
 
-    <!-- ================= CTA BAND ================= -->
-    <section class="cta-band">
-      <div class="container" data-reveal>
-        <h2>Ready to explore the quantum world?</h2>
-        <p>Registration opens on Thursday, October 1st</p>
-        <a href="#" class="btn btn-primary" data-register-btn>
-          <span class="btn-label">Register Now</span>
+    <!-- ================= DISCORD COMMUNITY ================= -->
+    <section id="discord" class="discord-banner" aria-labelledby="discord-heading" data-social-group="discord" hidden>
+      <div class="container discord-banner-inner">
+        <div class="discord-banner-copy">
+          <p class="discord-eyebrow">Stay connected</p>
+          <h2 id="discord-heading">Join the Qiskit Fall Fest Discord</h2>
+          <p>Get event updates, ask questions and connect with other participants before and during the fest.</p>
+        </div>
+        <a href="#" class="btn btn-discord-invite" data-social="discord" target="_blank" rel="noopener noreferrer" hidden>
+          Join our Discord <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
     </section>
@@ -463,7 +515,7 @@
             <a href="#" data-social="linkedin" aria-label="LinkedIn" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-            <a href="#" data-social="discord" aria-label="Discord" hidden>
+            <a href="#" data-social="discord" aria-label="Join our Discord" target="_blank" rel="noopener noreferrer" hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="4"/><circle cx="9" cy="12" r="1.2"/><circle cx="15" cy="12" r="1.2"/></svg>
             </a>
             <a href="#" data-social="github" aria-label="GitHub" hidden>
@@ -487,7 +539,7 @@
         <div class="footer-col">
           <h5>Connect</h5>
           <ul>
-            <li><a href="mailto:contact" data-cfg="contactEmail">cwelhengodag@mun.ca</a></li>
+            <li><a href="mailto:qiskitfallfest.mun2026@gmail.com" data-cfg="contactEmail">qiskitfallfest.mun2026@gmail.com</a></li>
             <li><a href="#" data-cfg="qiskitFallFestGlobalUrl" target="_blank" rel="noopener noreferrer">Global Qiskit Fall Fest</a></li>
             <li><a href="https://www.mun.ca" target="_blank" rel="noopener noreferrer">Memorial University</a></li>
           </ul>
@@ -495,7 +547,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; <span data-cfg="year">2026</span> Qiskit Fall Fest — Memorial University of Newfoundland. Not officially affiliated with IBM.</span>
+        <span>&copy; <span data-cfg="year">2026</span> Qiskit Fall Fest — Memorial University of Newfoundland.</span>
         <span>Built with ❤ for the MUN quantum community.</span>
       </div>
     </div>

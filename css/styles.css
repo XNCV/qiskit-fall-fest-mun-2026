@@ -457,6 +457,76 @@ section {
   color: var(--accent);
 }
 
+/* ---------- Discord community ---------- */
+[data-social][hidden],
+[data-social-group][hidden] {
+  display: none;
+}
+.btn-discord {
+  background: #eee3ff;
+  color: #35204f;
+  box-shadow: 0 8px 24px rgba(105, 41, 196, 0.14);
+}
+.btn-discord:hover {
+  background: #e2d1fa;
+}
+.btn-discord svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.btn-discord:focus-visible,
+.btn-discord-invite:focus-visible {
+  outline: 3px solid #6929c4;
+  outline-offset: 4px;
+}
+.btn-discord:focus-visible {
+  outline-color: #6929c4;
+}
+.discord-banner {
+  padding: 48px 0;
+  color: #35204f;
+  background: linear-gradient(120deg, #cfbbf9, #ffd8f3);
+}
+.discord-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.discord-banner-copy {
+  max-width: 720px;
+}
+.discord-banner-copy .discord-eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.discord-banner h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+.discord-banner-copy p {
+  margin: 0;
+}
+.btn-discord-invite {
+  flex-shrink: 0;
+  background: #fff;
+  color: #53288c;
+}
+@media (max-width: 700px) {
+  .discord-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .btn-discord-invite {
+    width: 100%;
+  }
+}
 /* ---------- About ---------- */
 .about-grid {
   display: grid;
@@ -697,6 +767,63 @@ section {
   }
 }
 
+/* ---------- Speaker profiles ---------- */
+.speaker-card.speaker-card--pending {
+  grid-template-columns: minmax(0, 1fr);
+}
+.speaker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.speaker-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 28px;
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+}
+.speaker-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 12px;
+}
+.speaker-details {
+  min-width: 0;
+}
+.speaker-details h3 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+.speaker-affiliation {
+  margin: 0 0 16px;
+  color: var(--primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.speaker-bio {
+  margin: 0;
+  color: var(--text-muted);
+}
+@media (max-width: 640px) {
+  .speaker-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .speaker-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
 /* ---------- Sponsors ---------- */
 .sponsor-tiers {
   display: flex;
@@ -713,22 +840,56 @@ section {
   margin-bottom: 20px;
 }
 .sponsor-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
-.sponsor-slot {
-  width: 180px;
-  height: 90px;
-  border: 1.5px dashed var(--card-border);
+.sponsor-card {
+  padding: 28px;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  text-align: center;
+}
+.sponsor-logo {
+  height: 120px;
+  padding: 20px;
+  margin-bottom: 24px;
   border-radius: 12px;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.sponsor-logo img {
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  object-fit: contain;
+}
+.sponsor-card h3 {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+.sponsor-card p {
+  margin: 0;
   color: var(--text-muted);
-  font-size: 0.85rem;
-  background: var(--card-bg);
+}
+@media (max-width: 900px) {
+  .sponsor-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .sponsor-row {
+    grid-template-columns: 1fr;
+  }
+  .sponsor-card {
+    padding: 20px;
+  }
 }
 .sponsor-cta {
   text-align: center;
@@ -795,6 +956,9 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
+}
+.venue-indent {
+  visibility: hidden;
 }
 .location-info h3 {
   font-size: 1.4rem;

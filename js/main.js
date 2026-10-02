@@ -44,18 +44,20 @@ function applyConfig() {
   const globalLink = document.querySelector("[data-cfg='qiskitFallFestGlobalUrl']");
   if (globalLink) globalLink.href = c.qiskitFallFestGlobalUrl;
 
-  // Social links — hide any icon whose URL wasn't filled in
+  // Keep every social link and its community section in sync with the config.
   Object.entries(c.social).forEach(([key, url]) => {
-    const el = document.querySelector(`[data-social='${key}']`);
-    if (!el) return;
-    if (url) {
-      el.href = url;
-      el.hidden = false;
-    } else {
-      el.hidden = true;
-    }
+    document.querySelectorAll(`[data-social='${key}']`).forEach((el) => {
+      el.hidden = !url;
+      if (url) {
+        el.href = url;
+      } else {
+        el.removeAttribute("href");
+      }
+    });
+    document.querySelectorAll(`[data-social-group='${key}']`).forEach((el) => {
+      el.hidden = !url;
+    });
   });
-
   // FAQ
   const faqList = document.querySelector("#faq-list");
   if (faqList && Array.isArray(c.faq)) {

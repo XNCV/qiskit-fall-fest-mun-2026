@@ -16,12 +16,12 @@ const SITE_CONFIG = {
   // ---- Registration ---------------------------------------------------
   // Paste your registration link here (Google Form, Eventbrite, Luma, etc.)
   // Leave it as an empty string "" to show a disabled "Opening Soon" button.
-  registrationUrl: "",
+  registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSf181Ea4ht072ue_GQnFvq88QGW-TTEgRhXGOPLqUIv8SQ4qQ/viewform",
 
   // ---- Date & Location (edit freely — plain text, shown as typed) ----
   dateText: "November 6–8, 2026",
   timeText: "",
-  venueName: "Venue: To Be Announced",
+  venueName: "Venue: EN4002 – Boardroom",
   venueAddress: "Memorial University of Newfoundland, St. John's, NL, Canada",
 
   // Google Maps embed src — swap the query in the URL for your exact venue.
@@ -31,7 +31,7 @@ const SITE_CONFIG = {
     "https://www.google.com/maps?q=47.5741117,-52.7352094&z=15&output=embed",
 
   // ---- Contact & social (replace placeholders before publishing) -----
-  contactEmail: "cwelhengodag@mun.ca",
+  contactEmail: "qiskitfallfest.mun2026@gmail.com",
   social: {
     linkedin: "",
     discord: "https://discord.gg/f92cFUj5MV",
