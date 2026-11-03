@@ -144,10 +144,11 @@ function setupNav() {
 /* ---------------------------------------------------------------- */
 function setupRegisterButtons() {
   const url = (SITE_CONFIG.registrationUrl || "").trim();
+  const isClosed = SITE_CONFIG.registrationClosed === true;
   const buttons = document.querySelectorAll("[data-register-btn]");
 
   buttons.forEach((btn) => {
-    if (url) {
+    if (url && !isClosed) {
       btn.href = url;
       btn.target = "_blank";
       btn.rel = "noopener noreferrer";
@@ -158,9 +159,9 @@ function setupRegisterButtons() {
       btn.removeAttribute("href");
       btn.classList.add("is-disabled");
       btn.setAttribute("aria-disabled", "true");
-      btn.querySelector(".btn-label").textContent = btn.closest("header")
-        ? "Registration opens on Oct 1st"
-        : "Registration opens on Thursday, October 1st";
+      btn.querySelector(".btn-label").textContent = isClosed
+        ? "Registration Closed"
+        : "Registration Opening Soon";
       btn.addEventListener("click", (e) => e.preventDefault());
     }
   });

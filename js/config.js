@@ -15,7 +15,8 @@ const SITE_CONFIG = {
 
   // ---- Registration ---------------------------------------------------
   // Paste your registration link here (Google Form, Eventbrite, Luma, etc.)
-  // Leave it as an empty string "" to show a disabled "Opening Soon" button.
+  // Set registrationClosed to false when registration reopens.
+  registrationClosed: true,
   registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSf181Ea4ht072ue_GQnFvq88QGW-TTEgRhXGOPLqUIv8SQ4qQ/viewform",
 
   // ---- Date & Location (edit freely — plain text, shown as typed) ----

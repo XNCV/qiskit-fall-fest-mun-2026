@@ -23,9 +23,10 @@ no build step, no framework, no dependencies. Deploys directly to GitHub Pages.
 
 Almost everything you'll want to change lives in **[js/config.js](js/config.js)**:
 
-- `registrationUrl` — leave `""` empty to show a disabled "Registration Opening Soon"
-  button everywhere. Paste a Google Form / Eventbrite / Luma link here once you have one,
-  and every "Register" button on the site will automatically activate.
+- `registrationClosed` — set to `true` to show a disabled "Registration Closed" button
+  everywhere. Set it to `false` to activate the link in `registrationUrl`.
+- `registrationUrl` — the Google Form / Eventbrite / Luma registration link used whenever
+  registration is open.
 - `dateText`, `venueName`, `venueAddress`, `mapEmbedSrc` — event date and location.
 - `contactEmail` — replace the placeholder before publishing.
 - `social` — add Instagram/LinkedIn/Discord/Twitter/GitHub URLs; icons for empty ones
